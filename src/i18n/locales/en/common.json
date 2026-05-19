@@ -1,0 +1,104 @@
+{
+  "brand": "AutoXchange",
+  "tagline": "Your key to the best cars",
+  "nav": {
+    "catalog": "Catalog",
+    "buy": "Buy a Car",
+    "sellExchange": "Sell / Exchange",
+    "financing": "Financing",
+    "about": "About",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "completed": "Completed transactions",
+    "conditions": "Working conditions",
+    "inspect": "Free Inspection",
+    "compare": "Compare",
+    "wishlist": "Wishlist"
+  },
+  "catalogCategories": {
+    "sedans": "Sedans",
+    "suvs": "SUVs",
+    "hatchbacks": "Hatchbacks",
+    "luxury": "Luxury",
+    "electric": "Electric",
+    "budget": "Under Budget"
+  },
+  "buttons": {
+    "readMore": "Read more",
+    "contactUs": "Contact Us",
+    "ourCatalog": "Our Catalog",
+    "searchCars": "Search Cars",
+    "viewDetails": "View Details",
+    "applyFilters": "Apply Filters",
+    "reset": "Reset",
+    "compareNow": "Compare Now",
+    "clearAll": "Clear All",
+    "sendMessage": "Send Message",
+    "bookInspection": "Book Free Inspection",
+    "getQuote": "Get Instant Quote",
+    "browseCars": "Browse Cars",
+    "applyFinance": "Apply for Finance",
+    "scheduleInspection": "Schedule Inspection",
+    "getValuation": "Get My Valuation",
+    "proceedExchange": "Proceed to Exchange",
+    "buyThisOne": "Buy This One",
+    "addCar": "Add Car",
+    "remove": "Remove",
+    "acceptCookies": "Accept",
+    "declineCookies": "Decline"
+  },
+  "status": {
+    "inStock": "In Stock",
+    "onOrder": "On Order",
+    "onTheWay": "On the Way"
+  },
+  "footer": {
+    "tagline": "Your key to the best cars — buy, sell, and exchange with confidence.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "orderCar": "Order a Car",
+    "carsInStock": "Cars in Stock",
+    "carsOnWay": "Cars on the Way",
+    "warranties": "Warranties",
+    "tradeIn": "Trade-In",
+    "address": "123 Auto Boulevard, Bandra Kurla Complex, Mumbai 400051",
+    "phone": "+91 98765 43210",
+    "email": "hello@autoxchange.in",
+    "hours": "Mon–Sat: 9:00 AM – 7:00 PM",
+    "copyright": "© 2025 AutoXchange. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "toast": {
+    "wishlistAdd": "Added to wishlist",
+    "wishlistRemove": "Removed from wishlist",
+    "compareAdd": "Added to compare",
+    "compareRemove": "Removed from compare",
+    "compareMax": "Maximum 3 cars for comparison",
+    "formSuccess": "Message sent successfully!",
+    "copied": "Copied to clipboard"
+  },
+  "cookie": {
+    "message": "We use cookies to improve your experience. By continuing, you agree to our cookie policy.",
+    "accept": "Accept"
+  },
+  "mobileNav": {
+    "home": "Home",
+    "browse": "Browse",
+    "sell": "Sell",
+    "exchange": "Exchange",
+    "account": "Account"
+  },
+  "search": {
+    "placeholder": "Search cars...",
+    "viewAll": "View all results for"
+  },
+  "empty": {
+    "wishlist": "Your wishlist is empty",
+    "wishlistDesc": "Save cars you love and find them here.",
+    "compare": "No cars to compare",
+    "compareDesc": "Select up to 3 cars from the inventory to compare."
+  },
+  "loading": "Loading..."
+}

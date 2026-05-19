@@ -1,0 +1,29 @@
+{
+  "breadcrumb": { "home": "Home", "buy": "Buy" },
+  "bookTestDrive": "Book Test Drive",
+  "getFinancing": "Get Financing",
+  "addWishlist": "Add to Wishlist",
+  "removeWishlist": "Remove from Wishlist",
+  "compare": "Compare",
+  "whatsapp": "WhatsApp",
+  "tabs": {
+    "overview": "Overview",
+    "specs": "Specifications",
+    "features": "Features",
+    "history": "History",
+    "finance": "Finance Calculator"
+  },
+  "overview": {
+    "highlights": "Key Highlights",
+    "condition": "Condition Report"
+  },
+  "history": {
+    "owners": "Previous Owners",
+    "service": "Service Records",
+    "accident": "Accident History",
+    "verified": "Verified"
+  },
+  "similar": "Similar Cars You May Like",
+  "sellerInfo": "Seller Information",
+  "certified": "Certified"
+}

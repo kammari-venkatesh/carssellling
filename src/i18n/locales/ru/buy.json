@@ -1,0 +1,34 @@
+{
+  "title": "Купить авто",
+  "subtitle": "Проверенный каталог",
+  "showing": "Показано {{count}} авто",
+  "reset": "Сбросить",
+  "compare": "Сравнить",
+  "page": "Стр. {{current}} из {{total}}",
+  "sort": {
+    "label": "Сортировка",
+    "priceAsc": "Цена: по возрастанию",
+    "priceDesc": "Цена: по убыванию",
+    "newest": "Сначала новые",
+    "mileage": "Мин. пробег"
+  },
+  "view": {
+    "grid": "Сетка",
+    "list": "Список"
+  },
+  "filters": {
+    "title": "Фильтры",
+    "keyword": "Поиск",
+    "make": "Марка",
+    "model": "Модель",
+    "year": "Год",
+    "price": "Цена",
+    "mileage": "Пробег",
+    "bodyType": "Кузов",
+    "fuel": "Топливо",
+    "transmission": "КПП",
+    "condition": "Состояние",
+    "status": "Статус",
+    "color": "Цвет"
+  }
+}

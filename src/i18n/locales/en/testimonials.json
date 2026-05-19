@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "name": "Arjun Mehta", "quote": "Bought my BMW 5 Series through AutoXchange. Seamless process from browsing to delivery!", "type": "bought" },
+    { "name": "Sneha Kapoor", "quote": "Sold my Honda City in just 20 hours. The doorstep inspection was incredibly convenient.", "type": "sold" },
+    { "name": "Vikram Singh", "quote": "Exchanged my old SUV for a new Mercedes. Fair valuation and excellent service throughout.", "type": "bought" },
+    { "name": "Ananya Iyer", "quote": "The financing options made it easy to afford my dream car. Highly recommend AutoXchange!", "type": "bought" },
+    { "name": "Rahul Desai", "quote": "Transparent pricing and no hidden fees. Got the best price for my Toyota Fortuner.", "type": "sold" }
+  ]
+}

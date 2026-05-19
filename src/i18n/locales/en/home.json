@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "slide1Title": "AutoXchange",
+    "slide1Sub": "Buy, Sell, Exchange — Hassle Free",
+    "slide1Btn1": "Your key to the best cars",
+    "slide1Btn2": "Our Catalog",
+    "slide2Title": "Sell Your Car in 24 Hours",
+    "slide2Sub": "Free inspection at your door. Instant payment.",
+    "slide2Btn": "Get Instant Quote",
+    "slide3Title": "Exchange & Upgrade Today",
+    "slide3Sub": "Trade your old car. Drive something new.",
+    "slide3Btn": "Calculate Trade-In Value"
+  },
+  "search": {
+    "make": "Make / Brand",
+    "model": "Model",
+    "year": "Year",
+    "price": "Price Range",
+    "bodyType": "Body Type",
+    "searchBtn": "Search Cars"
+  },
+  "catalog": {
+    "label": "Catalog",
+    "heading": "We offer a wide range of car models from Europe and Japan — from compact city cars to powerful SUVs"
+  },
+  "services": {
+    "orderTitle": "Order a Car",
+    "orderDesc": "We select a car based on your criteria, from trim level and condition to budget. We support the transaction at every stage, from selection to key delivery.",
+    "stockTitle": "Cars in Stock",
+    "stockDesc": "Selected and verified cars available for immediate purchase. The ideal choice for those who value time and want to get a car without waiting.",
+    "wayTitle": "Cars on the Way",
+    "wayDesc": "Cars that are already in the delivery process. The optimal combination of cost, timing, and choice — you reserve a car before it arrives."
+  },
+  "featured": {
+    "label": "Featured Cars",
+    "heading": "Browse our verified, ready-to-drive inventory",
+    "tabs": {
+      "all": "All",
+      "inStock": "In Stock",
+      "onOrder": "On Order",
+      "onTheWay": "On the Way"
+    }
+  },
+  "howItWorks": {
+    "label": "Process",
+    "heading": "Buy or Sell in 3 Simple Steps",
+    "buying": "Buying",
+    "selling": "Selling",
+    "buySteps": [
+      { "title": "Browse & Filter", "desc": "Explore our verified inventory with advanced filters." },
+      { "title": "Book Free Inspection", "desc": "Schedule a doorstep inspection at your convenience." },
+      { "title": "Drive Home", "desc": "Complete paperwork and drive away the same day." }
+    ],
+    "sellSteps": [
+      { "title": "Get Instant Quote", "desc": "Enter your car details for an instant valuation." },
+      { "title": "Free Doorstep Inspection", "desc": "Our experts inspect your car at your location." },
+      { "title": "Instant Payment", "desc": "Receive payment directly to your bank account." }
+    ]
+  },
+  "trust": {
+    "carsSold": "Cars Sold",
+    "satisfaction": "Satisfaction Rate",
+    "sellTime": "Avg. Sell Time",
+    "brands": "Car Brands",
+    "carsSoldVal": "5,000+",
+    "satisfactionVal": "98%",
+    "sellTimeVal": "24hrs",
+    "brandsVal": "50+"
+  },
+  "testimonials": {
+    "label": "Reviews",
+    "heading": "What Our Customers Say",
+    "bought": "Bought a Car",
+    "sold": "Sold My Car"
+  },
+  "cta": {
+    "text": "AutoXchange is a car dealership that brings together the best vehicles from Europe and Japan to offer you reliability and confidence on the road"
+  }
+}

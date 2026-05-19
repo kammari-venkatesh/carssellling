@@ -1,0 +1,17 @@
+{
+  "title": "Compare Cars",
+  "subtitle": "Compare up to 3 cars side by side",
+  "specs": {
+    "price": "Price",
+    "year": "Year",
+    "km": "Mileage",
+    "engine": "Engine",
+    "hp": "Horsepower",
+    "fuel": "Fuel Type",
+    "transmission": "Transmission",
+    "bodyType": "Body Type",
+    "seats": "Seats",
+    "rating": "Rating"
+  },
+  "features": "Features Comparison"
+}

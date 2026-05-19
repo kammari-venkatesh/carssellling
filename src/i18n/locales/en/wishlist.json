@@ -1,0 +1,5 @@
+{
+  "title": "My Wishlist",
+  "subtitle": "{{count}} saved cars",
+  "empty": "No saved cars yet"
+}

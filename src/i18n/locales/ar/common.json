@@ -1,0 +1,104 @@
+{
+  "brand": "أوتو إكسشينج",
+  "tagline": "مفتاحك لأفضل السيارات",
+  "nav": {
+    "catalog": "الكتالوج",
+    "buy": "شراء سيارة",
+    "sellExchange": "بيع / استبدال",
+    "financing": "التمويل",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "contactUs": "اتصل بنا",
+    "completed": "المعاملات المكتملة",
+    "conditions": "شروط العمل",
+    "inspect": "فحص مجاني",
+    "compare": "مقارنة",
+    "wishlist": "المفضلة"
+  },
+  "catalogCategories": {
+    "sedans": "سيدان",
+    "suvs": "دفع رباعي",
+    "hatchbacks": "هاتشباك",
+    "luxury": "فاخرة",
+    "electric": "كهربائية",
+    "budget": "تحت الميزانية"
+  },
+  "buttons": {
+    "readMore": "اقرأ المزيد",
+    "contactUs": "اتصل بنا",
+    "ourCatalog": "كتالوجنا",
+    "searchCars": "بحث السيارات",
+    "viewDetails": "عرض التفاصيل",
+    "applyFilters": "تطبيق الفلاتر",
+    "reset": "إعادة تعيين",
+    "compareNow": "قارن الآن",
+    "clearAll": "مسح الكل",
+    "sendMessage": "إرسال الرسالة",
+    "bookInspection": "حجز فحص مجاني",
+    "getQuote": "عرض فوري",
+    "browseCars": "تصفح السيارات",
+    "applyFinance": "تقدم للتمويل",
+    "scheduleInspection": "جدولة الفحص",
+    "getValuation": "احصل على التقييم",
+    "proceedExchange": "متابعة الاستبدال",
+    "buyThisOne": "اشترِ هذه",
+    "addCar": "إضافة سيارة",
+    "remove": "إزالة",
+    "acceptCookies": "قبول",
+    "declineCookies": "رفض"
+  },
+  "status": {
+    "inStock": "متوفر",
+    "onOrder": "قيد الطلب",
+    "onTheWay": "في الطريق"
+  },
+  "footer": {
+    "tagline": "مفتاحك لأفضل السيارات — اشترِ وبع واستبدل بثقة.",
+    "quickLinks": "روابط سريعة",
+    "services": "الخدمات",
+    "contact": "اتصل",
+    "orderCar": "اطلب سيارة",
+    "carsInStock": "سيارات متوفرة",
+    "carsOnWay": "سيارات في الطريق",
+    "warranties": "الضمانات",
+    "tradeIn": "استبدال",
+    "address": "123 شارع السيارات، مومباي 400051",
+    "phone": "+91 98765 43210",
+    "email": "hello@autoxchange.in",
+    "hours": "الإثنين–السبت: 9:00 – 19:00",
+    "copyright": "© 2025 أوتو إكسشينج. جميع الحقوق محفوظة.",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة"
+  },
+  "toast": {
+    "wishlistAdd": "أُضيفت للمفضلة",
+    "wishlistRemove": "أُزيلت من المفضلة",
+    "compareAdd": "أُضيفت للمقارنة",
+    "compareRemove": "أُزيلت من المقارنة",
+    "compareMax": "الحد الأقصى 3 سيارات للمقارنة",
+    "formSuccess": "تم إرسال الرسالة بنجاح!",
+    "copied": "تم النسخ"
+  },
+  "cookie": {
+    "message": "نستخدم ملفات تعريف الارتباط لتحسين تجربتك.",
+    "accept": "قبول"
+  },
+  "mobileNav": {
+    "home": "الرئيسية",
+    "browse": "تصفح",
+    "sell": "بيع",
+    "exchange": "استبدال",
+    "account": "حسابي"
+  },
+  "search": {
+    "placeholder": "ابحث عن سيارات...",
+    "viewAll": "عرض كل النتائج لـ"
+  },
+  "empty": {
+    "wishlist": "قائمة المفضلة فارغة",
+    "wishlistDesc": "احفظ السيارات التي تعجبك هنا.",
+    "compare": "لا توجد سيارات للمقارنة",
+    "compareDesc": "اختر حتى 3 سيارات من المخزون."
+  },
+  "loading": "جاري التحميل..."
+}

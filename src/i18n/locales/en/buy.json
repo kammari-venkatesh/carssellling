@@ -1,0 +1,37 @@
+{
+  "title": "Buy a Car",
+  "subtitle": "Browse our verified inventory",
+  "showing": "Showing {{count}} cars",
+  "sort": {
+    "label": "Sort by",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "newest": "Newest First",
+    "mileage": "Lowest Mileage"
+  },
+  "view": {
+    "grid": "Grid",
+    "list": "List"
+  },
+  "filters": {
+    "title": "Filters",
+    "keyword": "Search keyword",
+    "make": "Make",
+    "model": "Model",
+    "year": "Year Range",
+    "price": "Price Range",
+    "mileage": "Mileage Range",
+    "bodyType": "Body Type",
+    "fuel": "Fuel Type",
+    "transmission": "Transmission",
+    "condition": "Condition",
+    "status": "Status",
+    "color": "Color"
+  },
+  "bodyTypes": ["Sedan", "SUV", "Hatchback", "Coupe", "Convertible", "Pickup", "Van", "Electric"],
+  "fuels": ["Petrol", "Diesel", "Hybrid", "Electric"],
+  "transmissions": ["Automatic", "Manual"],
+  "conditions": ["New", "Used", "Certified Pre-Owned"],
+  "compare": "Compare",
+  "page": "Page {{current}} of {{total}}"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Book Your Free Car Inspection",
+  "subtitle": "Our certified inspectors will visit your location.",
+  "steps": {
+    "car": "Car Details",
+    "location": "Location",
+    "schedule": "Date & Time",
+    "confirm": "Confirmation"
+  },
+  "car": {
+    "make": "Make",
+    "model": "Model",
+    "year": "Year",
+    "vin": "VIN (optional)"
+  },
+  "location": {
+    "city": "City",
+    "address": "Full Address"
+  },
+  "confirm": {
+    "title": "Booking Confirmed!",
+    "ref": "Reference Number",
+    "summary": "Inspection Summary"
+  },
+  "next": "Next",
+  "back": "Back",
+  "submit": "Confirm Booking"
+}

@@ -1,0 +1,104 @@
+{
+  "brand": "AutoXchange",
+  "tagline": "Ваш ключ к лучшим автомобилям",
+  "nav": {
+    "catalog": "Каталог",
+    "buy": "Купить авто",
+    "sellExchange": "Продать / Обмен",
+    "financing": "Финансирование",
+    "about": "О нас",
+    "contact": "Контакты",
+    "contactUs": "Связаться",
+    "completed": "Завершённые сделки",
+    "conditions": "Условия работы",
+    "inspect": "Бесплатный осмотр",
+    "compare": "Сравнение",
+    "wishlist": "Избранное"
+  },
+  "catalogCategories": {
+    "sedans": "Седаны",
+    "suvs": "Внедорожники",
+    "hatchbacks": "Хэтчбеки",
+    "luxury": "Люкс",
+    "electric": "Электро",
+    "budget": "До бюджета"
+  },
+  "buttons": {
+    "readMore": "Подробнее",
+    "contactUs": "Связаться",
+    "ourCatalog": "Наш каталог",
+    "searchCars": "Найти авто",
+    "viewDetails": "Подробнее",
+    "applyFilters": "Применить",
+    "reset": "Сбросить",
+    "compareNow": "Сравнить",
+    "clearAll": "Очистить",
+    "sendMessage": "Отправить",
+    "bookInspection": "Записаться на осмотр",
+    "getQuote": "Мгновенная оценка",
+    "browseCars": "Смотреть авто",
+    "applyFinance": "Оформить кредит",
+    "scheduleInspection": "Записаться",
+    "getValuation": "Получить оценку",
+    "proceedExchange": "Продолжить обмен",
+    "buyThisOne": "Купить",
+    "addCar": "Добавить",
+    "remove": "Удалить",
+    "acceptCookies": "Принять",
+    "declineCookies": "Отклонить"
+  },
+  "status": {
+    "inStock": "В наличии",
+    "onOrder": "Под заказ",
+    "onTheWay": "В пути"
+  },
+  "footer": {
+    "tagline": "Ваш ключ к лучшим авто — покупайте, продавайте и обменивайте с уверенностью.",
+    "quickLinks": "Ссылки",
+    "services": "Услуги",
+    "contact": "Контакты",
+    "orderCar": "Заказать авто",
+    "carsInStock": "В наличии",
+    "carsOnWay": "В пути",
+    "warranties": "Гарантии",
+    "tradeIn": "Трейд-ин",
+    "address": "123 Auto Boulevard, Мумбаи 400051",
+    "phone": "+91 98765 43210",
+    "email": "hello@autoxchange.in",
+    "hours": "Пн–Сб: 9:00 – 19:00",
+    "copyright": "© 2025 AutoXchange. Все права защищены.",
+    "privacy": "Конфиденциальность",
+    "terms": "Условия"
+  },
+  "toast": {
+    "wishlistAdd": "Добавлено в избранное",
+    "wishlistRemove": "Удалено из избранного",
+    "compareAdd": "Добавлено к сравнению",
+    "compareRemove": "Удалено из сравнения",
+    "compareMax": "Максимум 3 авто для сравнения",
+    "formSuccess": "Сообщение отправлено!",
+    "copied": "Скопировано"
+  },
+  "cookie": {
+    "message": "Мы используем cookies для улучшения опыта.",
+    "accept": "Принять"
+  },
+  "mobileNav": {
+    "home": "Главная",
+    "browse": "Каталог",
+    "sell": "Продать",
+    "exchange": "Обмен",
+    "account": "Аккаунт"
+  },
+  "search": {
+    "placeholder": "Поиск авто...",
+    "viewAll": "Все результаты для"
+  },
+  "empty": {
+    "wishlist": "Избранное пусто",
+    "wishlistDesc": "Сохраняйте понравившиеся авто здесь.",
+    "compare": "Нет авто для сравнения",
+    "compareDesc": "Выберите до 3 авто из каталога."
+  },
+  "loading": "Загрузка..."
+}

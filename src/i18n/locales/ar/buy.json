@@ -1,0 +1,34 @@
+{
+  "title": "شراء سيارة",
+  "subtitle": "تصفح مخزوننا المُحقق",
+  "showing": "عرض {{count}} سيارة",
+  "reset": "إعادة تعيين",
+  "compare": "قارن",
+  "page": "صفحة {{current}} من {{total}}",
+  "sort": {
+    "label": "ترتيب",
+    "priceAsc": "السعر: من الأقل",
+    "priceDesc": "السعر: من الأعلى",
+    "newest": "الأحدث",
+    "mileage": "أقل مسافة"
+  },
+  "view": {
+    "grid": "شبكة",
+    "list": "قائمة"
+  },
+  "filters": {
+    "title": "الفلاتر",
+    "keyword": "كلمة البحث",
+    "make": "الماركة",
+    "model": "الموديل",
+    "year": "نطاق السنة",
+    "price": "نطاق السعر",
+    "mileage": "نطاق المسافة",
+    "bodyType": "نوع الهيكل",
+    "fuel": "نوع الوقود",
+    "transmission": "ناقل الحركة",
+    "condition": "الحالة",
+    "status": "التوفر",
+    "color": "اللون"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "title": "Sell Your Car in Under 24 Hours",
+    "subtitle": "Free doorstep inspection. Transparent pricing. Instant payment.",
+    "cta": "Get My Instant Quote"
+  },
+  "valuation": {
+    "title": "Instant Car Valuation",
+    "step1": "Car Details",
+    "step2": "Condition",
+    "step3": "Location & Timing",
+    "step4": "Contact Details",
+    "make": "Make",
+    "model": "Model",
+    "year": "Year",
+    "variant": "Variant / Trim",
+    "km": "KM Driven",
+    "condition": "Overall Condition",
+    "excellent": "Excellent",
+    "good": "Good",
+    "fair": "Fair",
+    "needsWork": "Needs Work",
+    "exterior": "Exterior Condition",
+    "interior": "Interior Condition",
+    "accident": "Accident History",
+    "service": "Service History Available?",
+    "owners": "Number of Owners",
+    "city": "City",
+    "date": "Preferred Inspection Date",
+    "time": "Preferred Time Slot",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "yes": "Yes",
+    "no": "No",
+    "resultTitle": "Your Estimated Value",
+    "resultSub": "Based on current market conditions",
+    "nextSteps": "Next: Schedule a free doorstep inspection to confirm your price."
+  },
+  "steps": {
+    "title": "How Selling Works",
+    "items": [
+      "Submit your car details online",
+      "Receive instant valuation",
+      "Free doorstep inspection",
+      "Accept final offer",
+      "Instant payment to your account"
+    ]
+  },
+  "benefits": {
+    "title": "Why Sell With Us",
+    "items": [
+      { "title": "Free Doorstep Inspection", "desc": "Our experts come to you — no dealership visits needed." },
+      { "title": "Best Market Price", "desc": "Data-driven pricing ensures you get the best value." },
+      { "title": "Instant Payment", "desc": "Payment transferred directly to your bank within hours." },
+      { "title": "Seller Protection", "desc": "Full documentation and legal support throughout." }
+    ]
+  }
+}

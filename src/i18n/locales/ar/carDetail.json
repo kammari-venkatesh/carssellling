@@ -1,0 +1,32 @@
+{
+  "breadcrumb": {
+    "home": "الرئيسية",
+    "buy": "شراء"
+  },
+  "bookTestDrive": "حجز تجربة قيادة",
+  "getFinancing": "احصل على تمويل",
+  "addWishlist": "أضف للمفضلة",
+  "removeWishlist": "أزل من المفضلة",
+  "compare": "قارن",
+  "whatsapp": "واتساب",
+  "tabs": {
+    "overview": "نظرة عامة",
+    "specs": "المواصفات",
+    "features": "الميزات",
+    "history": "السجل",
+    "finance": "حاسبة التمويل"
+  },
+  "overview": {
+    "highlights": "أبرز المميزات",
+    "condition": "تقرير الحالة"
+  },
+  "history": {
+    "owners": "الملاك السابقون",
+    "service": "سجلات الصيانة",
+    "accident": "تاريخ الحوادث",
+    "verified": "مُحقق"
+  },
+  "similar": "سيارات مشابهة",
+  "sellerInfo": "معلومات البائع",
+  "certified": "معتمد"
+}

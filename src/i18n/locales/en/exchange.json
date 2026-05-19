@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "Upgrade Your Car. Exchange & Drive New.",
+    "subtitle": "Trade in your current car and upgrade seamlessly."
+  },
+  "calculator": {
+    "yourCar": "Your Current Car",
+    "wantCar": "Car You Want",
+    "estimatedValue": "Estimated Value",
+    "carPrice": "Car Price",
+    "difference": "Difference to Pay",
+    "financingNeeded": "Financing may be required"
+  },
+  "process": {
+    "title": "Exchange Process",
+    "steps": [
+      "Enter your car details",
+      "Get valuation + pick new car",
+      "Free inspection of your car",
+      "Pay/receive difference & drive home"
+    ]
+  },
+  "benefits": {
+    "title": "Exchange Benefits",
+    "items": [
+      { "title": "Seamless Upgrade", "desc": "Swap your old car for a better one in one visit." },
+      { "title": "Fair Valuation", "desc": "Transparent trade-in pricing based on market data." },
+      { "title": "Flexible Financing", "desc": "Finance the difference with competitive rates." }
+    ]
+  }
+}

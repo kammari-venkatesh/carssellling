@@ -1,0 +1,32 @@
+{
+  "breadcrumb": {
+    "home": "Главная",
+    "buy": "Каталог"
+  },
+  "bookTestDrive": "Тест-драйв",
+  "getFinancing": "Кредит",
+  "addWishlist": "В избранное",
+  "removeWishlist": "Убрать",
+  "compare": "Сравнить",
+  "whatsapp": "WhatsApp",
+  "tabs": {
+    "overview": "Обзор",
+    "specs": "Характеристики",
+    "features": "Опции",
+    "history": "История",
+    "finance": "EMI"
+  },
+  "overview": {
+    "highlights": "Особенности",
+    "condition": "Отчёт"
+  },
+  "history": {
+    "owners": "Владельцы",
+    "service": "Сервис",
+    "accident": "ДТП",
+    "verified": "Проверено"
+  },
+  "similar": "Похожие",
+  "sellerInfo": "Продавец",
+  "certified": "Сертифицирован"
+}

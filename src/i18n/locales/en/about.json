@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "About AutoXchange",
+    "subtitle": "Bringing together the best vehicles from Europe and Japan to offer you reliability and confidence on the road."
+  },
+  "story": {
+    "title": "Our Story",
+    "milestones": [
+      { "year": "2018", "title": "Founded", "desc": "AutoXchange launched in Mumbai with a vision to transform car buying." },
+      { "year": "2020", "title": "Expanded", "desc": "Opened offices in Delhi, Bangalore, and Hyderabad." },
+      { "year": "2022", "title": "5,000 Cars", "desc": "Crossed 5,000 successful transactions nationwide." },
+      { "year": "2024", "title": "Digital First", "desc": "Launched full online buy, sell, and exchange platform." }
+    ]
+  },
+  "why": {
+    "title": "Why Choose Us",
+    "items": [
+      { "title": "Verified Inventory", "desc": "Every car undergoes 200+ point inspection." },
+      { "title": "Transparent Pricing", "desc": "No hidden fees. What you see is what you pay." },
+      { "title": "Instant Valuation", "desc": "Sell your car in under 24 hours." },
+      { "title": "Flexible Finance", "desc": "Partner with leading banks for best rates." },
+      { "title": "Pan-India Service", "desc": "Doorstep inspection in 6 major cities." },
+      { "title": "Expert Support", "desc": "Dedicated advisors at every step." }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "members": [
+      { "name": "Rajesh Kumar", "role": "CEO & Founder" },
+      { "name": "Priya Sharma", "role": "Head of Operations" },
+      { "name": "Amit Patel", "role": "Chief Technology Officer" },
+      { "name": "Sneha Reddy", "role": "Customer Experience Lead" }
+    ]
+  }
+}

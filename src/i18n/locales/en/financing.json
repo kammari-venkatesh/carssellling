@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Drive Now, Pay Later. Flexible Auto Financing.",
+    "subtitle": "Competitive rates and flexible tenure options."
+  },
+  "emi": {
+    "title": "EMI Calculator",
+    "carPrice": "Car Price",
+    "downPayment": "Down Payment",
+    "tenure": "Loan Tenure",
+    "interestRate": "Interest Rate",
+    "monthlyEmi": "Monthly EMI",
+    "totalInterest": "Total Interest",
+    "totalAmount": "Total Amount",
+    "months": "months"
+  },
+  "options": {
+    "title": "Finance Options",
+    "newCar": { "title": "New Car Loan", "desc": "Finance your brand new dream car with up to 7 years tenure." },
+    "usedCar": { "title": "Used Car Loan", "desc": "Affordable financing for certified pre-owned vehicles." },
+    "againstCar": { "title": "Loan Against Car", "desc": "Unlock the value of your existing car for immediate funds." }
+  },
+  "apply": {
+    "title": "How to Apply",
+    "steps": ["Choose your car", "Calculate EMI", "Submit documents", "Get approved & drive"]
+  },
+  "faq": {
+    "title": "Eligibility & FAQ",
+    "items": [
+      { "q": "What is the minimum income required?", "a": "A minimum monthly income of ₹25,000 is typically required." },
+      { "q": "What documents are needed?", "a": "PAN card, Aadhaar, salary slips, and bank statements for the last 3 months." },
+      { "q": "How long does approval take?", "a": "Most applications are approved within 24-48 hours." },
+      { "q": "Can I prepay my loan?", "a": "Yes, prepayment is allowed with minimal charges after 12 months." }
+    ]
+  },
+  "partners": {
+    "title": "Partner Banks & NBFCs"
+  }
+}
