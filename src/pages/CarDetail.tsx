@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { trackRecentlyViewed } from '@/components/shared/RecentlyViewed'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Heart, Share2, MessageCircle } from 'lucide-react'
@@ -24,6 +25,10 @@ export default function CarDetail() {
 
   const car = id ? getCarById(id) : undefined
   const similar = id ? getSimilarCars(id) : []
+
+  useEffect(() => {
+    if (id) trackRecentlyViewed(id)
+  }, [id])
 
   if (!car) {
     return (
@@ -153,24 +158,20 @@ export default function CarDetail() {
         </div>
       </div>
 
-      <div className="mt-10 border-b border-border">
-        <div className="flex gap-1 overflow-x-auto">
-          {tabs.map(({ id: tabId, label }) => (
-            <button
-              key={tabId}
-              type="button"
-              onClick={() => setTab(tabId)}
-              className={cn(
-                'shrink-0 border-b-2 px-4 py-3 text-sm font-medium transition-colors',
-                tab === tabId
-                  ? 'border-accent-red text-accent-red'
-                  : 'border-transparent text-text-light hover:text-text-dark',
-              )}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+      <div className="mt-10 flex flex-wrap gap-2 rounded-2xl bg-white p-2 shadow-card">
+        {tabs.map(({ id: tabId, label }) => (
+          <button
+            key={tabId}
+            type="button"
+            onClick={() => setTab(tabId)}
+            className={cn(
+              'rounded-full px-4 py-2 text-sm font-medium transition-all',
+              tab === tabId ? 'bg-text-dark text-white' : 'text-text-mid hover:bg-number-bg',
+            )}
+          >
+            {label}
+          </button>
+        ))}
       </div>
 
       <div className="mt-8">

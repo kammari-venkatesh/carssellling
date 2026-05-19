@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import type { CarFilters as Filters } from '@/types/car'
 import { getUniqueMakes, getModelsByMake } from '@/data/mockCars'
-import { PillButton } from '@/components/shared/PillButton'
+import { cn } from '@/lib/utils'
 
 interface CarFiltersProps {
   filters: Filters
@@ -10,11 +10,38 @@ interface CarFiltersProps {
   onReset: () => void
 }
 
+function Chip({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean
+  onClick: () => void
+  children: React.ReactNode
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        'rounded-full border px-2.5 py-1 text-xs font-medium transition-colors',
+        active
+          ? 'border-accent bg-accent/20 text-white'
+          : 'border-border text-text-muted hover:border-border-hover hover:text-white',
+      )}
+    >
+      {children}
+    </button>
+  )
+}
+
 export function CarFilters({ filters, onChange, onApply, onReset }: CarFiltersProps) {
   const { t } = useTranslation(['buy', 'common'])
   const makes = getUniqueMakes()
   const selectedMake = filters.makes?.[0] || ''
   const models = selectedMake ? getModelsByMake(selectedMake) : []
+  const bodyTypes = t('bodyTypes', { returnObjects: true }) as string[]
+  const fuels = t('fuels', { returnObjects: true }) as string[]
 
   const toggleArray = (key: keyof Filters, value: string) => {
     const arr = (filters[key] as string[] | undefined) || []
@@ -23,28 +50,36 @@ export function CarFilters({ filters, onChange, onApply, onReset }: CarFiltersPr
   }
 
   return (
-    <div className="space-y-6 rounded-2xl bg-white p-6 shadow-card">
-      <h3 className="font-heading text-lg font-semibold">{t('filters.title')}</h3>
+    <div className="panel space-y-5 p-5">
+      <h3 className="text-base font-semibold text-white">{t('filters.title')}</h3>
 
       <div>
-        <label className="text-sm font-medium text-text-dark">{t('filters.keyword')}</label>
+        <label className="text-xs font-medium uppercase tracking-wide text-text-muted">
+          {t('filters.keyword')}
+        </label>
         <input
           type="text"
           value={filters.keyword || ''}
           onChange={(e) => onChange({ ...filters, keyword: e.target.value })}
-          className="mt-1 w-full rounded-xl border border-border px-3 py-2 text-sm"
+          className="input-dark mt-2"
         />
       </div>
 
       <div>
-        <label className="text-sm font-medium">{t('filters.make')}</label>
-        <div className="mt-2 max-h-40 space-y-1 overflow-y-auto">
+        <label className="text-xs font-medium uppercase tracking-wide text-text-muted">
+          {t('filters.make')}
+        </label>
+        <div className="mt-2 max-h-36 space-y-0.5 overflow-y-auto">
           {makes.map((m) => (
-            <label key={m} className="flex items-center gap-2 text-sm">
+            <label
+              key={m}
+              className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-1.5 text-sm text-text-muted hover:bg-white/5 hover:text-white"
+            >
               <input
                 type="checkbox"
-                checked={filters.makes?.includes(m)}
+                checked={!!filters.makes?.includes(m)}
                 onChange={() => toggleArray('makes', m)}
+                className="accent-[#e63946]"
               />
               {m}
             </label>
@@ -54,45 +89,63 @@ export function CarFilters({ filters, onChange, onApply, onReset }: CarFiltersPr
 
       {selectedMake && (
         <div>
-          <label className="text-sm font-medium">{t('filters.model')}</label>
+          <label className="text-xs font-medium uppercase tracking-wide text-text-muted">
+            {t('filters.model')}
+          </label>
           <select
             value={filters.model || ''}
             onChange={(e) => onChange({ ...filters, model: e.target.value || undefined })}
-            className="mt-1 w-full rounded-xl border border-border px-3 py-2 text-sm"
+            className="select-dark input-dark mt-2"
           >
             <option value="">All</option>
-            {models.map((m) => <option key={m} value={m}>{m}</option>)}
+            {models.map((m) => (
+              <option key={m} value={m}>{m}</option>
+            ))}
           </select>
         </div>
       )}
 
       <div>
-        <label className="text-sm font-medium">{t('filters.bodyType')}</label>
-        <div className="mt-2 flex flex-wrap gap-1">
-          {(t('bodyTypes', { returnObjects: true }) as string[]).map((bt) => (
-            <button
+        <label className="text-xs font-medium uppercase tracking-wide text-text-muted">
+          {t('filters.bodyType')}
+        </label>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {bodyTypes.map((bt) => (
+            <Chip
               key={bt}
+              active={!!filters.bodyTypes?.includes(bt)}
               onClick={() => toggleArray('bodyTypes', bt)}
-              className={`rounded-full border px-2 py-0.5 text-xs ${filters.bodyTypes?.includes(bt) ? 'border-accent-red bg-accent-red text-white' : 'border-border'}`}
             >
               {bt}
-            </button>
+            </Chip>
           ))}
         </div>
       </div>
 
       <div>
-        <label className="text-sm font-medium">{t('filters.fuel')}</label>
-        <div className="mt-2 flex flex-wrap gap-1">
-          {(t('fuels', { returnObjects: true }) as string[]).map((f) => (
-            <button key={f} onClick={() => toggleArray('fuels', f)} className={`rounded-full border px-2 py-0.5 text-xs ${filters.fuels?.includes(f) ? 'border-accent-red bg-accent-red text-white' : 'border-border'}`}>{f}</button>
+        <label className="text-xs font-medium uppercase tracking-wide text-text-muted">
+          {t('filters.fuel')}
+        </label>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {fuels.map((f) => (
+            <Chip
+              key={f}
+              active={!!filters.fuels?.includes(f)}
+              onClick={() => toggleArray('fuels', f)}
+            >
+              {f}
+            </Chip>
           ))}
         </div>
       </div>
 
-      <div className="flex gap-2">
-        <PillButton onClick={onApply} className="flex-1 justify-center">{t('common:buttons.applyFilters')}</PillButton>
-        <PillButton variant="ghost" onClick={onReset}>{t('reset')}</PillButton>
+      <div className="flex gap-2 border-t border-border pt-4">
+        <button type="button" onClick={onApply} className="btn-primary flex-1 justify-center !py-2.5 text-sm">
+          {t('common:buttons.applyFilters')}
+        </button>
+        <button type="button" onClick={onReset} className="btn-secondary !px-4 !py-2.5 text-sm">
+          {t('reset')}
+        </button>
       </div>
     </div>
   )

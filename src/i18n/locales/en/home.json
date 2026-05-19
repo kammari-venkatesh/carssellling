@@ -1,5 +1,6 @@
 {
   "hero": {
+    "eyebrow": "Premium Automotive",
     "slide1Title": "AutoXchange",
     "slide1Sub": "Buy, Sell, Exchange — Hassle Free",
     "slide1Btn1": "Your key to the best cars",
@@ -12,6 +13,8 @@
     "slide3Btn": "Calculate Trade-In Value"
   },
   "search": {
+    "title": "Find your next car",
+    "subtitle": "Search our verified inventory by make, model, and budget.",
     "make": "Make / Brand",
     "model": "Model",
     "year": "Year",

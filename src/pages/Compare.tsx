@@ -44,7 +44,7 @@ export default function Compare() {
   }
 
   return (
-    <div className="container-main py-8">
+    <div className="container-main section-y">
       <h1 className="font-heading text-3xl font-bold">{t('compare:title')}</h1>
       <p className="mt-1 text-text-mid">{t('compare:subtitle')}</p>
 

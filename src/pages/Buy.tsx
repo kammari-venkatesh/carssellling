@@ -5,9 +5,10 @@ import { mockCars } from '@/data/mockCars'
 import { filterCars, sortCars } from '@/utils/filterCars'
 import type { CarFilters as Filters, SortOption } from '@/types/car'
 import { useCar } from '@/context/CarContext'
-import { CarCard } from '@/components/car/CarCard'
+import { PremiumCarCard } from '@/components/car/PremiumCarCard'
 import { CarFilters } from '@/components/car/CarFilters'
 import { CarGridSkeleton } from '@/components/shared/LoadingSkeleton'
+import { PageHeader } from '@/components/ui/PageHeader'
 import { cn } from '@/lib/utils'
 
 const PER_PAGE = 12
@@ -23,8 +24,8 @@ export default function Buy() {
   const [mobileFilters, setMobileFilters] = useState(false)
 
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 800)
-    return () => clearTimeout(t)
+    const timer = setTimeout(() => setLoading(false), 600)
+    return () => clearTimeout(timer)
   }, [])
 
   const filtered = useMemo(
@@ -42,71 +43,134 @@ export default function Buy() {
   }
 
   return (
-    <div className="container-main section-y">
-      <h1 className="text-section-heading font-semibold">{t('title')}</h1>
-      <p className="mt-2 text-text-mid">{t('subtitle')}</p>
+    <div className="page-pad">
+      <div className="container-main">
+        <PageHeader title={t('title')} subtitle={t('subtitle')} eyebrow="Inventory" />
 
-      <div className="mt-10 flex gap-8">
-        <aside className="hidden w-72 shrink-0 lg:sticky lg:top-24 lg:self-start lg:block">
-          <CarFilters filters={localFilters} onChange={setLocalFilters} onApply={apply} onReset={() => { resetFilters(); setLocalFilters({}) }} />
-        </aside>
+        <div className="flex gap-8">
+          <aside className="hidden w-72 shrink-0 lg:sticky lg:top-24 lg:block lg:self-start">
+            <CarFilters
+              filters={localFilters}
+              onChange={setLocalFilters}
+              onApply={apply}
+              onReset={() => {
+                resetFilters()
+                setLocalFilters({})
+              }}
+            />
+          </aside>
 
-        <div className="flex-1">
-          <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-white p-4 shadow-card">
-            <p className="text-sm text-text-mid">{t('showing', { count: filtered.length })}</p>
-            <div className="flex items-center gap-3">
-              <select value={sort} onChange={(e) => setSort(e.target.value as SortOption)} className="rounded-xl border border-border px-3 py-1.5 text-sm">
-                <option value="price-asc">{t('sort.priceAsc')}</option>
-                <option value="price-desc">{t('sort.priceDesc')}</option>
-                <option value="newest">{t('sort.newest')}</option>
-                <option value="mileage">{t('sort.mileage')}</option>
-              </select>
-              <div className="flex rounded-xl border border-border">
-                <button onClick={() => setListView(false)} className={cn('p-2', !listView && 'bg-number-bg')} aria-label={t('view.grid')}><Grid size={18} /></button>
-                <button onClick={() => setListView(true)} className={cn('p-2', listView && 'bg-number-bg')} aria-label={t('view.list')}><List size={18} /></button>
+          <div className="min-w-0 flex-1">
+            <div className="panel flex flex-wrap items-center justify-between gap-4 p-4">
+              <p className="text-sm text-text-muted">
+                {t('showing', { count: filtered.length })}
+              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                <select
+                  value={sort}
+                  onChange={(e) => setSort(e.target.value as SortOption)}
+                  className="input-dark !w-auto min-w-[140px]"
+                >
+                  <option value="price-asc">{t('sort.priceAsc')}</option>
+                  <option value="price-desc">{t('sort.priceDesc')}</option>
+                  <option value="newest">{t('sort.newest')}</option>
+                  <option value="mileage">{t('sort.mileage')}</option>
+                </select>
+                <div className="flex overflow-hidden rounded-lg border border-border">
+                  <button
+                    type="button"
+                    onClick={() => setListView(false)}
+                    className={cn('p-2 transition-colors', !listView ? 'bg-accent/20 text-white' : 'text-text-muted hover:text-white')}
+                    aria-label={t('view.grid')}
+                  >
+                    <Grid size={17} />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setListView(true)}
+                    className={cn('p-2 transition-colors', listView ? 'bg-accent/20 text-white' : 'text-text-muted hover:text-white')}
+                    aria-label={t('view.list')}
+                  >
+                    <List size={17} />
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setMobileFilters(true)}
+                  className="btn-secondary !py-2 !px-3 text-sm lg:hidden"
+                >
+                  {t('filters.title')}
+                </button>
               </div>
-              <button onClick={() => setMobileFilters(true)} className="rounded-xl border border-border px-3 py-1.5 text-sm lg:hidden">{t('filters.title')}</button>
             </div>
-          </div>
 
-          <div className="mt-6">
-            {loading ? (
-              <CarGridSkeleton count={6} />
-            ) : (
-              <div className={cn(listView ? 'space-y-4' : 'grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3')}>
-                {paginated.map((car) => (
-                  <CarCard key={car.id} car={car} listView={listView} />
+            <div className="mt-6">
+              {loading ? (
+                <CarGridSkeleton count={6} />
+              ) : paginated.length === 0 ? (
+                <div className="panel py-16 text-center text-text-muted">
+                  No vehicles match your filters.
+                </div>
+              ) : listView ? (
+                <div className="space-y-4">
+                  {paginated.map((car) => (
+                    <PremiumCarCard key={car.id} car={car} />
+                  ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                  {paginated.map((car) => (
+                    <PremiumCarCard key={car.id} car={car} />
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {totalPages > 1 && (
+              <div className="mt-10 flex justify-center gap-2">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                  <button
+                    key={p}
+                    type="button"
+                    onClick={() => setPage(p)}
+                    className={cn(
+                      'flex h-9 min-w-9 items-center justify-center rounded-lg border text-sm font-medium transition-colors',
+                      page === p
+                        ? 'border-accent bg-accent text-white'
+                        : 'border-border text-text-muted hover:border-border-hover hover:text-white',
+                    )}
+                  >
+                    {p}
+                  </button>
                 ))}
               </div>
             )}
           </div>
-
-          {totalPages > 1 && (
-            <div className="mt-8 flex justify-center gap-2">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setPage(i + 1)}
-                  className={cn(
-                    'rounded-full px-4 py-1.5 text-sm font-medium',
-                    page === i + 1 ? 'bg-text-dark text-white' : 'border border-border bg-white',
-                  )}
-                >
-                  {i + 1}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
       </div>
 
       {mobileFilters && (
-        <div className="fixed inset-0 z-50 bg-white p-6 lg:hidden overflow-y-auto">
-          <div className="flex justify-between mb-4">
-            <h3 className="font-heading text-lg font-semibold">{t('filters.title')}</h3>
-            <button onClick={() => setMobileFilters(false)}>✕</button>
-          </div>
-          <CarFilters filters={localFilters} onChange={setLocalFilters} onApply={apply} onReset={() => { resetFilters(); setLocalFilters({}) }} />
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <div className="absolute inset-0 bg-black/70" onClick={() => setMobileFilters(false)} />
+          <aside className="absolute end-0 top-0 flex h-full w-[min(100%,320px)] flex-col bg-card shadow-xl">
+            <div className="flex items-center justify-between border-b border-border p-4">
+              <span className="font-semibold text-white">{t('filters.title')}</span>
+              <button type="button" onClick={() => setMobileFilters(false)} className="text-text-muted hover:text-white">
+                ✕
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto p-4">
+              <CarFilters
+                filters={localFilters}
+                onChange={setLocalFilters}
+                onApply={apply}
+                onReset={() => {
+                  resetFilters()
+                  setLocalFilters({})
+                }}
+              />
+            </div>
+          </aside>
         </div>
       )}
     </div>

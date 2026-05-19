@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { SectionLabel } from '@/components/shared/SectionLabel'
 import { PillButton } from '@/components/shared/PillButton'
@@ -19,29 +18,23 @@ export function ServiceCards() {
 
   return (
     <section className="section-y" ref={ref}>
-      <div className="container-main text-center">
+      <div className={`container-main text-center transition-opacity duration-500 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
         <SectionLabel>{t('catalog.label')}</SectionLabel>
-        <h2 className="text-section-heading mx-auto mt-5 max-w-3xl font-medium">
+        <h2 className="text-section-heading mx-auto mt-4 max-w-3xl">
           {t('catalog.heading')}
         </h2>
       </div>
 
       <div className="container-main mt-12">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2"
-        >
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
           <ServiceCard num={cards[0].num} title={cards[0].title} desc={cards[0].desc} to={cards[0].to} />
           <ServiceCard num={cards[1].num} title={cards[1].title} desc={cards[1].desc} to={cards[1].to} />
           <ImageCell src={SERVICE_IMAGES.tailLight} alt="Car detail" className="md:row-span-1" />
           <ImageCell src={SERVICE_IMAGES.headlight} alt="Car headlight" className="hidden md:block" />
           <ServiceCard num={cards[2].num} title={cards[2].title} desc={cards[2].desc} to={cards[2].to} />
           <ImageCell src={SERVICE_IMAGES.silhouette} alt="Car silhouette" className="hidden md:block" />
-        </motion.div>
+        </div>
 
-        {/* Mobile: show images between cards */}
         <div className="mt-4 grid grid-cols-1 gap-4 md:hidden">
           <ImageCell src={SERVICE_IMAGES.headlight} alt="Car headlight" />
           <ImageCell src={SERVICE_IMAGES.silhouette} alt="Car silhouette" />
@@ -54,14 +47,14 @@ export function ServiceCards() {
 function ServiceCard({ num, title, desc, to }: { num: number; title: string; desc: string; to: string }) {
   const { t } = useTranslation('common')
   return (
-    <div className="relative flex h-[220px] flex-col rounded-2xl bg-white p-6 shadow-card">
-      <span className="absolute -start-3 -top-3 flex h-8 w-8 items-center justify-center rounded-full border-2 border-accent-red bg-white text-sm font-semibold text-accent-red">
+    <div className="pro-card relative flex h-[220px] flex-col p-6">
+      <span className="absolute -start-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full border border-accent-red bg-white text-xs font-bold text-accent-red">
         {num}
       </span>
-      <h3 className="mt-1 font-heading text-lg font-semibold text-text-dark">{title}</h3>
+      <h3 className="font-heading text-lg font-semibold text-text-dark">{title}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-text-mid line-clamp-4">{desc}</p>
-      <Link to={to} className="mt-4">
-        <PillButton size="sm">{t('buttons.readMore')} →</PillButton>
+      <Link to={to} className="mt-4 inline-block">
+        <PillButton variant="outline" size="sm">{t('buttons.readMore')}</PillButton>
       </Link>
     </div>
   )
@@ -69,8 +62,8 @@ function ServiceCard({ num, title, desc, to }: { num: number; title: string; des
 
 function ImageCell({ src, alt, className }: { src: string; alt: string; className?: string }) {
   return (
-    <motion.div whileHover={{ scale: 1.02 }} className={`h-[220px] overflow-hidden rounded-2xl ${className ?? ''}`}>
+    <div className={`h-[220px] overflow-hidden rounded-[20px] border border-border-subtle ${className ?? ''}`}>
       <CarImage src={src} alt={alt} dark aspect={false} className="h-full w-full" imgClassName="h-full w-full object-cover" />
-    </motion.div>
+    </div>
   )
 }

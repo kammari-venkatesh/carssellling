@@ -16,21 +16,24 @@ export function MobileBottomNav() {
   const location = useLocation()
 
   return (
-    <nav className="fixed bottom-0 start-0 end-0 z-40 border-t border-border bg-white md:hidden">
-      <div className="flex justify-around py-2">
-        {links.map(({ to, icon: Icon, labelKey }) => (
-          <Link
-            key={to}
-            to={to}
-            className={cn(
-              'flex flex-col items-center gap-0.5 px-2 py-1 text-[10px]',
-              location.pathname === to ? 'text-accent-red' : 'text-text-light',
-            )}
-          >
-            <Icon size={20} />
-            <span>{t(labelKey)}</span>
-          </Link>
-        ))}
+    <nav className="fixed bottom-0 start-0 end-0 z-40 border-t border-border-subtle bg-white/98 backdrop-blur-sm md:hidden">
+      <div className="flex justify-around py-2.5">
+        {links.map(({ to, icon: Icon, labelKey }) => {
+          const active = location.pathname === to
+          return (
+            <Link
+              key={to}
+              to={to}
+              className={cn(
+                'flex flex-col items-center gap-0.5 px-2 py-0.5 text-[10px] font-medium transition-colors',
+                active ? 'text-accent-red' : 'text-text-light',
+              )}
+            >
+              <Icon size={20} strokeWidth={active ? 2.25 : 1.75} />
+              <span>{t(labelKey)}</span>
+            </Link>
+          )
+        })}
       </div>
     </nav>
   )

@@ -24,7 +24,7 @@ export function FeaturedInventory() {
     <section className="section-y bg-bg-primary">
       <div className="container-main text-center">
         <SectionLabel>{t('featured.label')}</SectionLabel>
-        <h2 className="text-section-heading mt-5 font-medium">{t('featured.heading')}</h2>
+        <h2 className="text-section-heading mt-4">{t('featured.heading')}</h2>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           {tabs.map(({ key, label }) => (
             <button
@@ -32,8 +32,8 @@ export function FeaturedInventory() {
               type="button"
               onClick={() => setTab(key)}
               className={cn(
-                'rounded-full px-5 py-2 text-sm font-medium transition-all',
-                tab === key ? 'bg-text-dark text-white' : 'border border-border bg-white text-text-mid hover:border-text-mid',
+                'rounded-full px-5 py-2 text-sm font-semibold transition-colors',
+                tab === key ? 'bg-text-dark text-white shadow-sm' : 'border border-border-subtle bg-white text-text-mid hover:border-text-mid hover:text-text-dark',
               )}
             >
               {label}

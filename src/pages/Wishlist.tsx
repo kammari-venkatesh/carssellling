@@ -11,9 +11,9 @@ export default function Wishlist() {
   const cars = wishlist.map(getCarById).filter((c): c is NonNullable<typeof c> => !!c)
 
   return (
-    <div className="container-main py-8">
-      <h1 className="font-heading text-3xl font-bold">{t('wishlist:title')}</h1>
-      <p className="mt-1 text-text-mid">{t('wishlist:subtitle', { count: cars.length })}</p>
+    <div className="container-main section-y">
+      <h1 className="text-section-heading font-semibold">{t('wishlist:title')}</h1>
+      <p className="mt-2 text-text-mid">{t('wishlist:subtitle', { count: cars.length })}</p>
 
       {cars.length === 0 ? (
         <div className="mt-16 flex flex-col items-center text-center">

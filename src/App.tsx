@@ -8,7 +8,9 @@ import { CompareDrawer } from '@/components/shared/CompareDrawer'
 import { WhatsAppFab } from '@/components/shared/WhatsAppFab'
 import { BackToTop } from '@/components/shared/BackToTop'
 import { CookieConsent } from '@/components/shared/CookieConsent'
-import { MobileBottomNav } from '@/components/shared/MobileBottomNav'
+import { ScrollProgress } from '@/components/shared/ScrollProgress'
+import { StickyMobileCTA } from '@/components/shared/StickyMobileCTA'
+import { RecentlyViewed } from '@/components/shared/RecentlyViewed'
 import { PageTransition } from '@/components/shared/PageTransition'
 import Home from '@/pages/Home'
 import Buy from '@/pages/Buy'
@@ -25,11 +27,13 @@ import { FloatingValuation } from '@/components/sell/FloatingValuation'
 
 function Layout() {
   const location = useLocation()
+  const isHome = location.pathname === '/'
 
   return (
-    <div className="min-h-screen bg-bg-primary">
+    <div className="min-h-screen bg-bg text-text-muted">
+      <ScrollProgress />
       <Navbar />
-      <main className="min-h-[60vh] pb-20 lg:pb-0">
+      <main className={isHome ? '' : 'pt-24'}>
         <AnimatePresence mode="wait">
           <PageTransition key={location.pathname}>
             <Outlet />
@@ -40,8 +44,9 @@ function Layout() {
       <CompareDrawer />
       <WhatsAppFab />
       <BackToTop />
+      <RecentlyViewed />
+      <StickyMobileCTA />
       <CookieConsent />
-      <MobileBottomNav />
       <FloatingValuation />
     </div>
   )

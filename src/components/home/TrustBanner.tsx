@@ -12,12 +12,14 @@ export function TrustBanner() {
   ]
 
   return (
-    <section className="pb-8 pt-4">
+    <section className="pb-10 pt-2">
       <div className="container-main">
-        <div className="grid grid-cols-2 divide-x divide-border rounded-3xl bg-white py-10 shadow-card md:grid-cols-4">
-          {stats.map((s) => (
-            <StatCounter key={s.label} value={s.value} label={s.label} />
-          ))}
+        <div className="overflow-hidden rounded-[20px] border border-border-subtle bg-text-dark">
+          <div className="grid grid-cols-2 divide-x divide-white/10 md:grid-cols-4">
+            {stats.map((s) => (
+              <StatCounter key={s.label} value={s.value} label={s.label} dark />
+            ))}
+          </div>
         </div>
       </div>
     </section>

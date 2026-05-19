@@ -54,9 +54,9 @@ export default function Inspect() {
   }
 
   return (
-    <div className="container-main py-8">
-      <h1 className="font-heading text-3xl font-bold">{t('title')}</h1>
-      <p className="mt-1 text-text-mid">{t('subtitle')}</p>
+    <div className="container-main section-y">
+      <h1 className="text-section-heading font-semibold">{t('title')}</h1>
+      <p className="mt-2 text-text-mid">{t('subtitle')}</p>
 
       <div className="mx-auto mt-8 max-w-xl">
         <div className="flex gap-2">
